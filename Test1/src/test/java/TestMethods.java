@@ -1,6 +1,9 @@
 import junit.framework.Assert;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
+
+import java.util.Arrays;
 
 /**
  * Created by student on 2016/03/03.
@@ -62,5 +65,29 @@ public class TestMethods {
     public void testNulless() throws Exception {
         Assert.assertNotNull(td.getSurname());
 
+    }
+
+    @Test(expected = IndexOutOfBoundsException.class)
+    public void testFailing() throws Exception {
+
+           td.getArrayNums();
+    }
+
+    @Test(timeout=100)
+    public void testExceptions() throws Exception {
+        td.generateNums();
+    }
+
+    @Ignore
+    public void testDisabling() throws Exception {
+
+        System.out.print("");
+    }
+
+    @Test
+    public void testArrayContent() throws Exception {
+        int nums[]=new int[2];
+         nums[1]=1;
+        Assert.assertEquals(nums[1],nums[1]);
     }
 }

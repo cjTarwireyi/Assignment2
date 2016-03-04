@@ -9,8 +9,6 @@ public class TestDrivenClass {
     }
     public double dbNum (){
         return 5.0;
-
-
     }
 
     public boolean getTruth(){
@@ -44,10 +42,26 @@ public class TestDrivenClass {
 
         return "null";
     }
+    public int getArrayNums()
+    {
+        int []nums= new int[5];
 
 
+        nums[2]=22;
+        return nums[5];
+
+    }
+    public void generateNums() {
+        int count =2;
+
+         while(count<2){
+
+
+        }
     }
 
 
+
+    }
 
 
